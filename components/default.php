@@ -1,9 +1,13 @@
 <?php
 include('config.php');
-$a = "222";
-echo "a = $a";
+$site_name = $site_name;
 function get_header($title = null){
-	echo "a = $a";
+	if ($title == null) {
+		$the_title = $GLOBALS['site_name'];
+	}
+	else{
+		$the_title = "$title - ".$GLOBALS['site_name'];
+	}
 	?>
 	<!DOCTYPE html>
 	<html>
