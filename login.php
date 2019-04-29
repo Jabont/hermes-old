@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] == 1) {
+if(isset($_SESSION['login_status']) && $_SESSION['login_status'] == 1) {
 	header('location: dashboard.php');
 	die();
 }
