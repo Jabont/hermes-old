@@ -59,6 +59,7 @@ function get_headbar_menu($part){
 		<?php
 		break;
 		case 'register':
+		case 'index':
 		?>
 		<a href="login.php" title="" class="mob-wide  t-center capital btn padding no-round ffont">
 			login

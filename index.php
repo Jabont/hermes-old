@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <body class="page-default">
-	<?php get_component('headbar',['index']);?>
+	<?php get_component('headbar','{"page":"index"}');?>
 	<!--=== The Section Boxes : main ===-->
 	<section id="main" class="thescreen v-middle-flex">
 		<div class="inner cont-pd center">
