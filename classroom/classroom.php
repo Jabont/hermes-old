@@ -1,14 +1,15 @@
 <?php
 	session_start();
-	
+
 	include('../components/test.php');
 	include('conn.php');
 
 	if($_SESSION['login_status'] == 0) {
 		header('Location: ../login.php');
 	}
-	
-	$class_id = $_GET['id'];
+	include('function.php');
+	include('components/default.php');
+
 	$class = ongcon("SELECT * FROM class_main WHERE id = '$class_id';");
 ?>
 <!DOCTYPE html>
@@ -26,15 +27,21 @@
 		<div id="text-lead">ID  : <?php echo $_SESSION['username'] ?></div>
 		<div id="text-lead">UID : <?php echo $_SESSION['uid'] ?></div>
 		<div id="text-lead">Role : <?php echo $_SESSION['role'] ?></div><br><br>
-		<p>roel = 999 &#3626;&#3619;&#3657;&#3634;&#3591; class &#3652;&#3604;&#3657;</p>
+		<p>role = 999 &#3626;&#3619;&#3657;&#3634;&#3591; class &#3652;&#3604;&#3657;</p>
     <div class="regis-box">
 		<p id="text-lead">Classroom</p>
-		
-        <button name="form" class="submit" onclick="window.location.href='createClassroom.php'">create</button>
+
+		<?php
+    	if ($_SESSION['role'] == 999) { ?>
+	        <button name="form" class="submit" onclick="window.location.href='createClassroom.php'">create</button>
+		<?php
+		} ?>
+		<a href="enrolled.php" title="" >Enrolled</a>
+		<a href="MyClassroom.php" title="" >MyClassroom</a>
         <?php
 	        $con = con();
 	        $sql = "SELECT id, name, description FROM class_main";
-	        
+
 	        if ($result = $con->query($sql)) {
 		        while ($row = $result->fetch_assoc()) {
 		        	echo '<button name="form" class="ong-button" onclick="window.location.href=\'classroom_enrollment.php?id='.$row['id'].'\'">'.$row['name'].'</button>';

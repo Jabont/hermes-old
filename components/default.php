@@ -41,6 +41,7 @@ function get_headbar_menu($part){
 		</a>
 		<?php
 		break;
+
 		case 'register':
 		case 'index':
 		?>
@@ -49,6 +50,24 @@ function get_headbar_menu($part){
 		</a>
 		<?php
 		break;
+
+		case 'editor':
+		?>
+		<span id="autorun" class="mob-wide t-center capital btn btn-pink padding no-round ffont">
+			autoRun
+		</span> 
+		<span class="mob-wide t-center capital btn btn-blue padding no-round ffont" onclick="update()">
+			update
+		</span> 
+		</a>
+		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding no-round ffont">
+			save
+		</a>
+		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding no-round ffont">
+			fork
+		</a>
+		<?php
+
 	}
 }
 ?>

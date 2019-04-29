@@ -1,0 +1,24 @@
+:root{
+	--cover-gd-color: linear-gradient(to bottom right,var(--ci-purple-2),#0000,var(--ci-purple-2));
+	--cover-gd-fade: linear-gradient(to bottom,#0000,#0009);
+}
+
+.cover-wrap{
+	padding-top: 6em;
+	background-color: var(--ci-purple);
+	background-blend-mode: multiply;
+}
+.cover-caption{
+	max-width: 900px;
+	margin: auto;
+	text-align: left;
+	padding: 0 1em;
+}
+.cover-lead::before,
+.cover-lead::after{
+	content: "—";
+}
+.cover-lead{
+	letter-spacing: .5em;
+	font-weight: bold;
+}

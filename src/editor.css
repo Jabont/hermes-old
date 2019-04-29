@@ -1,0 +1,11 @@
+iframe {
+	background: #333;
+}
+
+.editor {
+	max-height: calc(calc(100vh - 64px) / 3);
+}
+
+#html-editor, #css-editor, #js-editor {
+	height: calc(calc(100vh - 208px) / 3);
+}

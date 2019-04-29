@@ -74,8 +74,7 @@ function save() {
   json.htmlSource = html_.getValue();
   json.cssSource = css_.getValue();
   json.jsSource = js_.getValue();
-  console.log(json);
-
+  
   $.ajax({
     url: "api/saveWing.php",
     type: "POST",
@@ -83,9 +82,32 @@ function save() {
     dataType: "json",
     contentType: "application/json; charset=utf-8",
     success: function (data) {
-      alert('success');
-      console.log(data);
-      location.hash = '#' + data;
+      if (data.success == true) {
+        alert('success');
+        location.hash = '#' + data.wing;
+      }
+    }
+  });
+}
+
+function fork() {
+  var json = {};
+
+  let id = window.location.hash.slice(1);
+  id = id ? id : -1;
+  json.wing_id = id;
+
+  $.ajax({
+    url: "api/forkWing.php",
+    type: "POST",
+    data: JSON.stringify(json),
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function (data) {
+      if (data.success == true) {
+        alert('success');
+        location.hash = '#' + data.wing;
+      }
     }
   });
 }
@@ -102,7 +124,7 @@ window.onload = function () {
         res = JSON.parse(res);
         //console.log(res.code);
         setupEditor();
-        console.log(res);
+        //console.log(res);
         if (res.found) {
           setupCode(res.code.html, res.code.css, res.code.js);
         } else {
@@ -125,7 +147,7 @@ window.onhashchange = function () {
         if (res.found) {
           setupCode(res.code.html, res.code.css, res.code.js);
         } else {
-          console.log("test");
+          //console.log("test");
           setupCode();
         }
         update();

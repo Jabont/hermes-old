@@ -12,7 +12,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  <a class="navbar-brand" href="#">
-	  	<img src="src/Logo_new.svg">
+	  	<img src="src/new.svg">
 	  	Hermes
 	  </a>
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -20,6 +20,7 @@
 	      <li class="nav-item active">
 	        <a class="nav-link" onclick="window.location.href='dashboard.php'">Home<span class="sr-only">(current)</span></a>
 	      </li>
+	      <span style="color: #D9D0D9;">Please fork before edit!</span>
 	      <!-- <li class="nav-item">
 	        <a class="nav-link" >Something</a>
 	      </li>
@@ -27,6 +28,7 @@
 	        <a class="nav-link" >Something</a>
 	      </li> -->
 	    </ul>
+	    <button class="btn btn-success my-2" type="" onclick="fork()">Fork</button>
 	    <button class="btn btn-success my-2" type="" onclick="save()">Save</button>
 	    <button class="btn btn-success my-2" type="" onclick="preview()">Preview</button>
 	    <button class="btn btn-danger" type="" onclick="autorun()" id="autorun">AutoRun</button>
@@ -66,10 +68,10 @@
 </html>
 
 <style scoped>
-        .text {
-                padding-top: 5px;
-                padding-bottom: 2px;
-        }
+    .text {
+        padding-top: 5px;
+        padding-bottom: 2px;
+    }
 	.hold-editor {
 		height:40vh;
 	}

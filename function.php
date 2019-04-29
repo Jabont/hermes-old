@@ -1,5 +1,5 @@
-<?php 
-include('config.php');
+<?php
+include_once('config.php');
 function con(){
 	include('config.php');
 	$link = mysqli_connect($CONFIG['db_host'], $CONFIG['db_user'], $CONFIG['db_password'], $CONFIG['db_name']);
@@ -11,5 +11,35 @@ function con(){
 	}
 	mysqli_set_charset($link,"utf8");
 	return $link;
+}
+
+function conn() {
+	include('config.php');
+	$servername = $CONFIG['db_host'];
+	$username = $CONFIG['db_user'];
+	$password = $CONFIG['db_password'];
+	$dbname = $CONFIG['db_name'];
+	$conn = new mysqli($servername, $username, $password, $dbname);
+
+	if ($conn->connect_error) {
+		die($conn->connect_error);
+	}
+	else {
+		mysqli_set_charset($conn, 'utf8');
+		return $conn;
+	}
+}
+
+function confect($sql) {
+	$con = con();
+	$res = mysqli_query($con,$sql);
+	$result = array();
+	$i = 0;
+	while ($row = mysqli_fetch_assoc($res)){
+		$result[$i] = $row;
+		$i = $i + 1;
+	}
+	mysqli_fetch_assoc($result);
+	return $result;
 }
 ?>

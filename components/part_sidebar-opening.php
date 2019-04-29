@@ -6,9 +6,12 @@
 			<span class="typcn typcn-times size-vl" onclick="toggle_menu()"></span>
 		</div>
 		<?php include('part_sidebar.php') ?>
+		<sp class="l"></sp>
+		<sp class="xl mobile-only"></sp>
+		<sp class="xl mobile-only"></sp>
 	</aside>
-	<aside id="side-blank" class="desktop-only"></aside>
-	<aside id="side-main" class="">
+	<aside id="side-blank" class="desktop-only bg-red"></aside>
+	<aside id="side-main" active="0">
 		<aside id="side-nav-mob" class="mobile-only padding shadow">
 			
 			<theboxes class="middle">

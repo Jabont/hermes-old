@@ -1,14 +1,19 @@
 /* CSS */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('font/typicons.min.css');
+/*@import url('src/sidebar.css');*/
 
 :root{
 	--navheight:64px;
-	--side-width:200px;
+	--side-width:208px;
+	--side-bg:#0a0a0a;
 
 	--pmr-font:Roboto Slab;
 	--df-bg:#111;
 	--df-txt:#fff;
+
+	--a-txt:#ffff;
+	--a-hover:#fffa;
 
 	--ci1:#ffCf40;
 	--ci2:#d28529;
@@ -18,14 +23,14 @@
 	--ci-blue-2:#2196F3;
 	--ci-purple:#AA00FF;
 	--ci-purple-2:#7C4DFF;
+	--ci-green:#00C853;
+	--ci-green-2:#00E676;
 
 	--btn-df-bg:linear-gradient(to bottom right,var(--ci1),var(--ci2));
 	--btn-df-txt:#000;
 	--btn-hv-bg:linear-gradient(to bottom right,var(--ci1),var(--ci2));
 	--btn-hv-txt:#000;
 
-	--a-txt:#fff;
-	--a-hover:#aaa;
 
 	--x24;24px;
 	--x32;32px;
@@ -36,6 +41,9 @@
 *{
 	color: var(--this-cl);
 	background: var(--this-bg);
+}
+.ffont, .title.ffont, h1, h2, h3, h4{
+	/*letter-spacing: .1em;*/
 }
 .roboto.roboto {
 	font-family: "Roboto","pmr-font","Sukhumvit Set",-apple-system, BlinkMacSystemFont,"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -52,37 +60,66 @@
 .bg-ci2.bg-ci2{
 	background: var(--ci2);
 }
-.cl-ci-pink.cl-ci-pink{
+
+/*COLOR CI*/
+
+/*pink*/
+.cl-ci-pink{
 	color: var(--ci-pink);
 }
-.bg-ci-pink.bg-ci-pink{
+.bg-ci-pink{
 	background: var(--ci-pink);
+}
+.bd-ci-pink{
+	border-color: var(--ci-pink);
 }
 .btn-pink,a.btn-pink,.btn-pink:hover,a.btn-pink:hover{
 	background: linear-gradient(to bottom right,var(--ci-pink),var(--ci-pink-2));
 	color: white;
 }
 
-
-.cl-ci-blue.cl-ci-blue{
+/*blue*/
+.cl-ci-blue{
 	color: var(--ci-blue);
 }
-.bg-ci-blue.bg-ci-blue{
+.bg-ci-blue{
 	background: var(--ci-blue);
+}
+.bd-ci-blue{
+	border-color: var(--ci-blue);
 }
 .btn-blue,a.btn-blue,.btn-blue:hover,a.btn-blue:hover{
 	background: linear-gradient(to bottom right,var(--ci-blue),var(--ci-blue-2));
 	color: white;
 }
 
-.cl-ci-purple.cl-ci-purple{
+/*purple*/
+.cl-ci-purple{
 	color: var(--ci-purple);
 }
-.bg-ci-purple.bg-ci-purple{
+.bg-ci-purple{
 	background: var(--ci-purple);
+}
+.bd-ci-purple{
+	border-color: var(--ci-purple);
 }
 .btn-purple,a.btn-purple,.btn-purple:hover,a.btn-purple:hover{
 	background: linear-gradient(to bottom right,var(--ci-purple),var(--ci-purple-2));
+	color: white;
+}
+
+/*green*/
+.cl-ci-green{
+	color: var(--ci-green);
+}
+.bg-ci-green{
+	background: var(--ci-green);
+}
+.bd-ci-green{
+	border-color: var(--ci-green);
+}
+.btn-green,a.btn-green,.btn-green:hover,a.btn-green:hover{
+	background: linear-gradient(to bottom right,var(--ci-green),var(--ci-green-2));
 	color: white;
 }
 
@@ -94,6 +131,10 @@
 .btn:hover, a.btn:hover{
 	transition: background-size .2s;
 	background-size: 200%; 
+}
+.underline{
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
 }
 
 /*========= DF */
@@ -111,56 +152,21 @@ body {
 iframe {
 	background: white;
 }
-
-
 .page-default{
 	margin-top: var(--navheight);
 }
 
-.page-sidebar{
-	display: flex;
-}
-.page-sidebar #side-nav-mob{
-	width: 100%;
-	background: #0a0a0a;
-}
-.page-sidebar #side-nav{
-	background: #0a0a0a;
-	width: var(--side-width);
-	height: 100vh;
-	overflow: auto;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 10;
-	/*border-right: 1px solid #fff1;*/
+.display_wing {
+	height: 250px;
+	background: red;
 }
 
-.page-sidebar #side-blank{
-	width: var(--side-width);
-	height: 100vh;
-}
-.page-sidebar #side-main{
-	width: calc(100% - var(--side-width));
-}
-/*-- Mobile Version --*/
-@media (max-width: 768px) {
-	.page-sidebar #side-nav{
-		width: 100%;
-		transition: left .3s;
-	}
-	.page-sidebar #side-nav[active="0"]{
-		left:-100%;
-	}
-	.page-sidebar #side-nav[active="1"]{
-		left:0%;
-	}
-	.page-sidebar #side-main{
-		width: 100%;
-	}
-}
-
-
+/*#search_wing {
+	color: white;
+	border: 0;
+	background: #111;
+	width: 30%;
+}*/
 .inline-container {
 	position: relative;
 	display: inline-grid;
@@ -184,10 +190,13 @@ iframe {
 	display: block;
 }
 
+.editor {
+	height: calc(calc(100vh - 64px) / 3);
+}
+
 .container div[editor] {
-	width: 30vw;
-	height: 30vh;
-	border-radius: 5px;
+	height: 300px;
+	/*border-radius: 5px;*/
 	/*
 	background: rgba(255, 255, 255, 0.8);
 	color: black !important;

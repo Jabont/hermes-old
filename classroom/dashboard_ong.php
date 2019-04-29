@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	
+
 	include('components/navbar.php');
 	echo $navbar;
 	include('conn.php');
@@ -9,7 +9,7 @@
 	}
 	$class_id = $_GET['class_id'];
 	$lesson_id = $_GET['lesson_id'];
-	
+
 	$pass = ongcon("SELECT * FROM class_enrollment WHERE class_id = ".$class_id." AND user_id = ".$_SESSION['uid'].";");
 	if (!$pass) {
 		header("Location: classroom.php");
@@ -24,7 +24,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" media="screen" href="../styles.css" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
-	
+
 </head>
 <body class="regis-bg">
     <div id="index-box">
