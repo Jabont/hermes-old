@@ -1,13 +1,13 @@
 <?php
 session_start();
-$page = "login";
+$page = "register";
 include('function.php');
 include('components/default.php');
 $_SESSION["login_status"] = 0;
-get_header("Login");
+get_header("Register");
 ?>
 <body class="page-default">
-	<?php get_component('headbar','{"page":"register"}');?>
+	<?php get_component('headbar','{"page":"'.$page.'"}');?>
 	<section id="main" class="thescreen v-middle-flex">
 		<div class="inner cont-pd">
 			<theboxes boxing="" mob="" class="top spacing -clip">

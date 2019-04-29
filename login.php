@@ -8,7 +8,7 @@ get_header("Login");
 ?>
 
 <body class="page-default">
-	<?php get_component('headbar','{"page":"login"}');?>
+	<?php get_component('headbar','{"page":"'.$page.'"}');?>
 	<section id="main" class="thescreen v-middle-flex">
 		<div class="inner cont-pd">
 			<theboxes boxing="" mob="" class="top spacing -clip">
