@@ -401,16 +401,12 @@ h1, h2, h3, h4 {
 	width: 100%;
 	min-height: 100vh;
 	position: relative;
-	overflow: hidden;
-	overflow: visible;
 	padding: 0;
 }
 .thescreen {
 	width: 100%;
 	min-height: calc(100vh - var(--navheight));
 	position: relative;
-	overflow: hidden;
-	overflow: visible;
 	padding: 0;
 }
 .full-h{
@@ -423,8 +419,6 @@ h1, h2, h3, h4 {
 	z-index: 9999;
 	min-height: 100vh;
 	position: relative;
-	overflow: hidden;
-	overflow: visible;
 	padding: 0;
 }
 /*.
@@ -1392,16 +1386,16 @@ Helper | Radius
 -------------------------------------------------------------------------*/
 .round{
 	/*border-radius: 5px !important;*/
-	border-radius: 5px;
+	border-radius: 5px !important;
 	overflow: hidden;
 }
 .circle{
 	/*border-radius: 10000px !important;*/
-	border-radius: 10000px;
+	border-radius: 100% !important;
 	overflow: hidden;
 }
 .no-round{
-	border-radius: 0px;
+	border-radius: 0px !important;
 }
 
 /*-------------------------------------------------------------------------

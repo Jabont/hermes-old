@@ -8,7 +8,7 @@ get_header("Login");
 ?>
 
 <body class="page-default">
-	<?php get_component('headbar'); ?>
+	<?php get_component('headbar','{"page":"login"}');?>
 	<section id="main" class="thescreen v-middle-flex">
 		<div class="inner cont-pd">
 			<theboxes boxing="" mob="" class="top spacing -clip">
@@ -29,7 +29,7 @@ get_header("Login");
 							<input type="password" name="password" placeholder="Password" class="input-box" required>
 						</label>
 						<sp class="vl"></sp>
-						<button type="submit" name="form" value="login" class="wide upper btn btn-pink padding ffont size-l">login</button>
+						<button type="submit" name="form" value="login" class="no-round wide capital btn btn-pink padding ffont size-l">login</button>
 						<sp class=""></sp>
 						<a href="register.php" title="" class="block t-right">Don't have an account yet?</a>
 					</form>

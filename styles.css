@@ -1,18 +1,24 @@
 /* CSS */
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 :root{
-	--navheight:56px;
+	--navheight:64px;
+	--pmr-font:Roboto Slab;
+
 	--ci1:#ffCf40;
-	--ci2:#f49931;
+	--ci2:#d28529;
 	--ci-pink:#FF00AA;
-	--btn-df-bg:#ffCf40;
+	--ci-pink-2:#ff0055;
+	--btn-df-bg:linear-gradient(to bottom right,var(--ci1),var(--ci2));
 	--btn-df-txt:#000;
-	--btn-hv-bg:#f49931;
+	--btn-hv-bg:linear-gradient(to bottom right,var(--ci1),var(--ci2));
 	--btn-hv-txt:#000;
 
 	--a-txt:#fff;
 	--a-hover:#aaa;
-	--pmr-font:Roboto Slab;
+}
+*{
+	color: var(--this-cl);
+	background: var(--this-bg);
 }
 .roboto.roboto {
 	font-family: "Roboto","pmr-font","Sukhumvit Set",-apple-system, BlinkMacSystemFont,"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -35,9 +41,20 @@
 .bg-ci-pink.bg-ci-pink{
 	background: var(--ci-pink);
 }
-.btn-pink,.btn-pink:hover{
-	background: var(--ci-pink);
+
+.btn-pink,a.btn-pink,.btn-pink:hover,a.btn-pink:hover{
+	background: linear-gradient(to bottom right,var(--ci-pink),var(--ci-pink-2));
 	color: white;
+}
+
+
+.btn, a.btn{
+	transition: background-size .2s;
+	background-size: 100%; 
+}
+.btn:hover, a.btn:hover{
+	transition: background-size .2s;
+	background-size: 200%; 
 }
 * {
 	margin: 0;

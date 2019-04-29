@@ -25,48 +25,58 @@ function get_header($title = null){
 	<?php
 }
 
-function get_component($part){
+function get_component($part,$data = null){	
+	$data = json_decode($data);
 	switch ($part) {
 		case 'headbar':
 		?>
 		<div id="headbar" class="padding">
-			<theboxes boxing="2" mob="" class="top">
-				<box><inner class="v-middle-wrap">
+			<theboxes class="middle">
+				<box col="6" mob="8"><inner class="v-middle-wrap">
 					<a href="<?=$GLOBALS['site_url']?>">
 						<img src="src/logo-2.svg" class="logo auto">
 						<h4 class="cl-ci1 inline-block padding-s-hzt"><?php echo $GLOBALS['site_name']?></h4>
-						<span class="cl-white roboto">by IT KMITL</span>
+						<span class="cl-white roboto mob-size-s">by IT KMITL</span>
 					</a>
 				</inner></box>
-				<box><inner>
-					<?php
-					if ( $page == "register" ) {
-						?>  
-						<button class="sign-in" onclick="window.location.href='login.php'">Sign In</button>
-						<?php
-					}
-					if ( $page == "login" ) {
-						?>
-						<button class="sign-in" onclick="window.location.href='register.php'">Sign Up</button>
-						<?php
-					}
-					?>
+				<box col="6" mob="4"><inner class="t-right">
+					<?php get_headbar_menu($data->page)?>
 				</inner></box>
 			</theboxes>
 		</div>
-		<style type="text/css" scoped>
-			.bar {
-				display: flex;
-				background-color:#000000; 
-				height: 44px;
-				width: calc(100% - 6px); /* Delete border width */
-				position: fixed;
-				border: 3px solid black;
-				z-index: 20;
-			}
-		</style>
+		<?php
+		break;
+	}
+}
+
+function get_headbar_menu($part){
+	switch ($part) {
+		case 'login':
+		?>
+		<a href="register.php" title="" class="mob-wide  t-center capital btn padding no-round ffont">
+			register
+		</a>
+		<?php
+		break;
+		case 'register':
+		?>
+		<a href="login.php" title="" class="mob-wide  t-center capital btn padding no-round ffont">
+			login
+		</a>
 		<?php
 		break;
 	}
 }
 ?>
+<!-- <?php
+if ( $page == "register" ) {
+	?>  
+	<button class="sign-in" onclick="window.location.href='login.php'">Sign In</button>
+	<?php
+}
+if ( $page == "login" ) {
+	?>
+	<button class="sign-in" onclick="window.location.href='register.php'">Sign Up</button>
+	<?php
+}
+?> -->
