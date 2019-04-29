@@ -1,12 +1,14 @@
 <?php
 session_start();
+if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] == 0) {
+	header('location: login.php');
+}
+
 $page = "dashboard";
 include('function.php');
 include('components/default.php');
 
-if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] == 0) {
-	header('location: login.php');
-}
+
 
 get_header("Dashboard");
 ?>

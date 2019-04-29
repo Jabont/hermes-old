@@ -1,4 +1,10 @@
 <?php
+session_start();
+if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] == 1) {
+	include('dashboard.php');
+	die();
+}
+
 include('function.php');
 include('components/default.php');
 get_header();

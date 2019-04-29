@@ -1,9 +1,13 @@
 <?php
 session_start();
+if(!isset($_SESSION['login_status']) || $_SESSION['login_status'] == 1) {
+	header('location: dashboard.php');
+	die();
+}
+
 $page = "login";
 include('function.php');
 include('components/default.php');
-$_SESSION["login_status"] = 0;
 get_header("Login");
 ?>
 
