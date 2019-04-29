@@ -20,13 +20,13 @@ get_header("Login");
 						<label>
 							Username
 							<sp class="s"></sp>
-							<input type="text" name="username" placeholder="Username" class="input-box" required>
+							<input type="text" name="username" placeholder="Username" class="input cl-black" required>
 						</label>
 						<sp class=""></sp>
 						<label>
 							Password
 							<sp class="s"></sp>
-							<input type="password" name="password" placeholder="Password" class="input-box" required>
+							<input type="password" name="password" placeholder="Password" class="input cl-black" required>
 						</label>
 						<sp class="vl"></sp>
 						<button type="submit" name="form" value="login" class="no-round wide capital btn btn-pink padding ffont size-l">login</button>
@@ -39,17 +39,7 @@ get_header("Login");
 	</section>
 
 	<?php
-	function con(){
-		$link = mysqli_connect("localhost", "hermes_db", "hermesit16", "hermes_db");
-		if (!$link) {
-			echo "Error: Unable to connect to MySQL." . PHP_EOL;
-			echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-			echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-			exit;
-		}
-		mysqli_set_charset($link,"utf8");
-		return $link;
-	}
+	
 
 	if (sizeof($_POST) > 0) {
 		$data = $_POST;

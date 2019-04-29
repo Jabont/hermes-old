@@ -1,4 +1,4 @@
-@import 'simple.css';
+@import 'simple.css?v2';
 @import 'colors.css';
 @import 'backgrounds.css';
 /*.
@@ -1593,13 +1593,13 @@ a.btn:hover{
 	background-color: transparent !important; 
 	border:1px solid;
 }
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
+input.input,input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"] {
 	line-height: 2.4em;
 	padding: 0 1em;
 	margin: 0;
-	/*border-radius: 0;*/
-	/*border: 1px solid;*/
+	width: 100%;
 	box-sizing: border-box;
+	background: white;
 }
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	font-size: 1em;

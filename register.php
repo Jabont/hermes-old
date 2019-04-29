@@ -17,7 +17,6 @@ get_header("Login");
 						<h2 class="h5 cl-ci1  t-center">Create Your Account</h2>
 						<label>Email
 							<sp class="s"></sp>
-
 							<input type="email" name="email" class="input-box" placeholder="Email">
 						</label>
 						<sp class=""></sp>
@@ -41,17 +40,6 @@ get_header("Login");
 	</section>
 
 	<?php
-	function con(){
-		$link = mysqli_connect("localhost", "hermes_db", "hermesit16", "hermes_db");
-		if (!$link) {
-			echo "Error: Unable to connect to MySQL." . PHP_EOL;
-			echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-			echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-			exit;
-		}
-		mysqli_set_charset($link,"utf8");
-		return $link;
-	}
 	if (sizeof($_POST) > 0) {
 		$data = $_POST;
 
