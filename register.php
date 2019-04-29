@@ -46,7 +46,10 @@ get_header("Register");
 		if ($data['form'] == 'fb_register') {
 			$fid = $data['fid'];
 			$displayName = $data['displayName'];
-			$sql = "INSERT INTO user(displayName,fid) VALUES ('$displayName','$fid')";
+			$sql = "INSERT INTO 
+			user(displayName,fid) 
+			VALUES 
+			('$displayName','$fid')";
 		}
 
 		if ($data['form'] == 'email_register') {
@@ -54,7 +57,10 @@ get_header("Register");
 			$username = $data['username'];
 			$password = $data['password'];
 			$password = hash('md5', $password);
-			$sql = "INSERT INTO user (email,username,password) VALUES ('$email','$username', '$password')";
+			$sql = "INSERT INTO 
+			user (email,username,password) 
+			VALUES 
+			('$email','$username', '$password')";
 		}
 
 		$con = con();
@@ -74,4 +80,4 @@ get_header("Register");
 
 	<script src="script.js"></script>
 </body>
-</html>
+<?php get_footer() ?>

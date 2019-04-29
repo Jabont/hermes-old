@@ -80,31 +80,4 @@ get_header("Login");
 	?>
 	<script src="script.js"></script>
 </body>
-</html>
-
-<style scoped>
-	#text-lead {
-		margin-left: 75px;
-		color: #ffCf40;
-		font-family: 'Roboto Slab', serif;
-		font-size: 48px;
-		font-weight: bold;
-	}
-	.container-login {
-		padding-top: 30px;
-		display: flex;
-		justify-content: center;
-	}
-	.regis-box {
-		width: 303px;
-	}
-	#dont-have-account {
-		cursor: pointer;
-		font-family: 'Roboto', serif;
-		padding: 20px;
-		display: inline;
-	}
-	#dont-have-account:hover {
-		text-decoration: underline;
-	}
-</style>
+<?php get_footer() ?>

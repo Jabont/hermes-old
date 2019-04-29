@@ -8,12 +8,12 @@ get_header();
 	<?php get_component('headbar','{"page":"index"}');?>
 	<!--=== The Section Boxes : main ===-->
 	<section id="main" class="thescreen v-middle-flex">
-		<div class="inner cont-pd center">
-			<theboxes boxing="" mob="" class="top ffont size-l">
+		<div class="inner cont-pd">
+			<theboxes class="top ffont size-l">
 				<box col="4" mob="" class=""></box>
 				<box col="4" mob="" class=""><inner class="t-center">
 					<div class="padding-xl-hzt">
-						<img src="src/logo-2.svg" class="wide">
+						<img src="<?=$logo_url?>" class="wide">
 					</div>
 					<sp class="xl"></sp>
 					<theboxes boxing="" mob="" class="top t-center spacing-l -clip">
@@ -30,4 +30,4 @@ get_header();
 		</div>
 	</section>
 </body>
-</html>
+<?php get_footer() ?>
