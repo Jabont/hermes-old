@@ -53,33 +53,33 @@ a, a:link, a:visited{
 	font-family: "Roboto","pmr-font","Sukhumvit Set",-apple-system, BlinkMacSystemFont,"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 .cl-ci1{
-	color: var(--ci1);
+	color: var(--ci1) !important;
 }
 .bg-ci1{
-	background: var(--ci1);
+	background: var(--ci1) !important;
 }
 .bd-ci1{
-	border-color: var(--ci1);
+	border-color: var(--ci1) !important;
 }
 
 .cl-ci2{
-	color: var(--ci2);
+	color: var(--ci2) !important;
 }
 .bg-ci2{
-	background: var(--ci2);
+	background: var(--ci2) !important;
 }
 .bd-ci2{
-	border-color: var(--ci2);
+	border-color: var(--ci2) !important;
 }
 
 .cl-ci3{
-	color: var(--ci3);
+	color: var(--ci3) !important;
 }
 .bg-ci3{
-	background: var(--ci3);
+	background: var(--ci3) !important;
 }
 .bd-ci3{
-	border-color: var(--ci3);
+	border-color: var(--ci3) !important;
 }
 
 /*COLOR CI*/

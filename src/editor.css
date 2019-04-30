@@ -9,3 +9,7 @@ iframe {
 #html-editor, #css-editor, #js-editor {
 	height: calc(calc(100vh - 208px) / 3);
 }
+
+#render{
+	background: #fff;
+}

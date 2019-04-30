@@ -55,17 +55,17 @@ function get_headbar_menu($part){
 
 		case 'editor':
 		?>
-		<span id="autorun" class="mob-wide t-center capital btn btn-pink padding no-round ffont">
-			autoRun
+		<span id="autorun" class="mob-wide t-center capital btn bg-ci3 cl-white padding ffont">
+			auto Run
 		</span> 
-		<span class="mob-wide t-center capital btn btn-blue padding no-round ffont" onclick="update()">
+		<span class="mob-wide t-center capital btn btn-blue padding ffont" onclick="update()">
 			update
 		</span> 
 		</a>
-		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding no-round ffont">
+		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding ffont">
 			save
 		</a>
-		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding no-round ffont">
+		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding ffont">
 			fork
 		</a>
 		<?php
