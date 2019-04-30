@@ -5,7 +5,7 @@
 	<span class="cl-white b5 block size-m">by IT KMITL</span>
 	<sp></sp>
 	<div>
-		<span class="typcn size-l typcn-time"></span>
+		<span class="typcn h8 typcn-time"></span>
 		<span id="time-counting" class="size-m">--:--:--</span>
 	</div>
 </div>
@@ -14,35 +14,37 @@
 
 <sp class="vl"></sp>
 <ul class="roboto capital">
-	<li><a href="dashboard.php"><span class="typcn size-l typcn-home-outline"></span> dashboard</a></li>
+	<li><a href="dashboard.php"><span class="typcn h8 typcn-home-outline"></span> dashboard</a></li>
 </ul>
 <sp class=""></sp>
-<h4 class="cl-ci-blue">Wings</h4>
-<ul class="roboto capital">
-	<li><a href="my-wings.php"><span class="typcn size-l typcn-feather"></span> my wings</a></li>
-	<li><a href=""><span class="typcn size-l typcn-document-text"></span> my assignments</a></li>
-	<li><a href=""><span class="typcn size-l typcn-heart-outline"></span> loved</a></li>
+<h4 class="cl-ci-blue upper">Wings</h4>
+<ul class="roboto capital">	
+	<li><a href="my-wings.php"><span class="typcn h8 typcn-feather"></span> my wings</a></li>
+	<li><a href=""><span class="typcn h8 typcn-document-text"></span> my works</a></li>
 
 </ul>
 <sp class=""></sp>
-<h4 class="cl-ci-purple">Classroom</h4>
+<h4 class="cl-ci-purple upper">Classroom</h4>
 <ul class="roboto capital">
-	<li><a href=""><span class="typcn size-l typcn-business-card"></span> Enrolled</a></li>
-	<li><a href=""><span class="typcn size-l typcn-folder-open"></span> Opening</a></li>
-	<li><a href=""><span class="typcn size-l typcn-tabs-outline"></span> my classroom</a></li>
-	<li><a href=""><span class="typcn size-l typcn-pencil"></span> new classroom</a></li>
+	<li><a href=""><span class="typcn h8 typcn-folder-open"></span> All</a></li>
+	<li><a href=""><span class="typcn h8 typcn-business-card"></span> Enrolled</a></li>
+	
+	<li><a href=""><span class="typcn h8 typcn-tabs-outline"></span> manager</a></li>
+	<li><a href=""><span class="typcn h8 typcn-pencil"></span> create new</a></li>
+	
 
 </ul>
 <sp class=""></sp>
-<h4 class="cl-ci-pink">Profile</h4>
+<h4 class="cl-ci-pink upper">Profile</h4>
 <ul class="roboto capital">
-	<li><a href=""><span class="typcn size-l typcn-user-outline"></span> my profile</a></li>
-	<li><a href=""><span class="typcn size-l typcn-cog-outline"></span> settings</a></li>
-	<li><a href="logout.php"><span class="typcn size-l typcn-export-outline"></span> log out</a></li>
+	<li><a href=""><span class="typcn h8 typcn-heart-outline"></span> loved</a></li>
+	<li><a href=""><span class="typcn h8 typcn-user-outline"></span> profile</a></li>
+	<li><a href=""><span class="typcn h8 typcn-cog-outline"></span> settings</a></li>
+	<li><a href="logout.php"><span class="typcn h8 typcn-export-outline"></span> log out</a></li>
 </ul>
 
 <sp class="xl"></sp>
-<h4 class="cl-ci1">Hermes</h4>
+<h4 class="cl-ci1 upper">Hermes</h4>
 <ul class="roboto capital">
 	<li><a href="">Statistics</a></li>
 	<li><a href="">About</a></li>

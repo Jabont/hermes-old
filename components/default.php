@@ -5,10 +5,10 @@ $site_url = $site_url;
 $logo_url = $logo_url;
 function get_header($title = null){
 	if ($title == null) {
-		$the_title = $GLOBALS['site_name'];
+		$the_title = $GLOBALS['site_name']." by IT KMITL";
 	}
 	else{
-		$the_title = "$title - ".$GLOBALS['site_name'];
+		$the_title = "$title — ".$GLOBALS['site_name']." by IT KMITL";
 	}
 	include('header.php');
 }

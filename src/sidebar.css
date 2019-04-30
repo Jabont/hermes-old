@@ -1,7 +1,10 @@
-
+:root{
+	--navheight:0;
+}
 .page-sidebar{
 	display: flex;
 	align-items: stretch;
+	margin-top: var(--navheight);
 }
 .page-sidebar #side-nav-mob{
 	width: 100%;
@@ -33,6 +36,9 @@
 }
 /*-- Mobile Version --*/
 @media (max-width: 768px) {
+	:root{
+		--navheight:59px;
+	}
 	.page-sidebar #side-nav{
 		width: 100%;
 		transition: left .3s;

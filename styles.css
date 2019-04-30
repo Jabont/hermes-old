@@ -17,6 +17,7 @@
 
 	--ci1:#ffCf40;
 	--ci2:#d28529;
+	--ci3:#666;
 	--ci-pink:#FF00AA;
 	--ci-pink-2:#ff0055;
 	--ci-blue:#4FC3F7;
@@ -48,17 +49,34 @@
 .roboto.roboto {
 	font-family: "Roboto","pmr-font","Sukhumvit Set",-apple-system, BlinkMacSystemFont,"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
-.cl-ci1.cl-ci1{
+.cl-ci1{
 	color: var(--ci1);
 }
-.bg-ci1.bg-ci1{
+.bg-ci1{
 	background: var(--ci1);
 }
-.cl-ci2.cl-ci2{
+.bd-ci1{
+	border-color: var(--ci1);
+}
+
+.cl-ci2{
 	color: var(--ci2);
 }
-.bg-ci2.bg-ci2{
+.bg-ci2{
 	background: var(--ci2);
+}
+.bd-ci2{
+	border-color: var(--ci2);
+}
+
+.cl-ci3{
+	color: var(--ci3);
+}
+.bg-ci3{
+	background: var(--ci3);
+}
+.bd-ci3{
+	border-color: var(--ci3);
 }
 
 /*COLOR CI*/
@@ -72,6 +90,15 @@
 }
 .bd-ci-pink{
 	border-color: var(--ci-pink);
+}
+.cl-ci-pink-2{
+	color: var(--ci-pink-2);
+}
+.bg-ci-pink-2{
+	background: var(--ci-pink-2);
+}
+.bd-ci-pink-2{
+	border-color: var(--ci-pink-2);
 }
 .btn-pink,a.btn-pink,.btn-pink:hover,a.btn-pink:hover{
 	background: linear-gradient(to bottom right,var(--ci-pink),var(--ci-pink-2));
@@ -88,6 +115,15 @@
 .bd-ci-blue{
 	border-color: var(--ci-blue);
 }
+.cl-ci-blue-2{
+	color: var(--ci-blue-2);
+}
+.bg-ci-blue-2{
+	background: var(--ci-blue-2);
+}
+.bd-ci-blue-2{
+	border-color: var(--ci-blue-2);
+}
 .btn-blue,a.btn-blue,.btn-blue:hover,a.btn-blue:hover{
 	background: linear-gradient(to bottom right,var(--ci-blue),var(--ci-blue-2));
 	color: white;
@@ -103,6 +139,15 @@
 .bd-ci-purple{
 	border-color: var(--ci-purple);
 }
+.cl-ci-purple-2{
+	color: var(--ci-purple-2);
+}
+.bg-ci-purple-2{
+	background: var(--ci-purple-2);
+}
+.bd-ci-purple-2{
+	border-color: var(--ci-purple-2);
+}
 .btn-purple,a.btn-purple,.btn-purple:hover,a.btn-purple:hover{
 	background: linear-gradient(to bottom right,var(--ci-purple),var(--ci-purple-2));
 	color: white;
@@ -117,6 +162,15 @@
 }
 .bd-ci-green{
 	border-color: var(--ci-green);
+}
+.cl-ci-green-2{
+	color: var(--ci-green-2);
+}
+.bg-ci-green-2{
+	background: var(--ci-green-2);
+}
+.bd-ci-green-2{
+	border-color: var(--ci-green-2);
 }
 .btn-green,a.btn-green,.btn-green:hover,a.btn-green:hover{
 	background: linear-gradient(to bottom right,var(--ci-green),var(--ci-green-2));
