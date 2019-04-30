@@ -36,7 +36,7 @@ function setEditor() {
   window.htmlEditor = ace.edit(document.querySelector('#html-editor'),
     {mode: "ace/mode/html",
     selectionStyle: "text",
-    theme: "ace/theme/twilight",
+    theme: "ace/theme/monokai",
   });
 
   htmlEditor.setOptions({
@@ -49,7 +49,7 @@ function setEditor() {
   window.cssEditor = ace.edit(document.querySelector('#css-editor'),
     {mode: "ace/mode/css",
     selectionStyle: "text",
-    theme: "ace/theme/twilight",
+    theme: "ace/theme/monokai",
   });
 
   cssEditor.setOptions({
@@ -62,7 +62,7 @@ function setEditor() {
   window.jsEditor = ace.edit(document.querySelector('#js-editor'),
     {mode: "ace/mode/javascript",
     selectionStyle: "text",
-    theme: "ace/theme/twilight",
+    theme: "ace/theme/monokai",
   });
 
   jsEditor.setOptions({
@@ -83,6 +83,10 @@ function setEditor() {
   jsEditor.getSession().on('change', function(){
    if (isAutorun) update();
  });
+
+  // document.querySelector('#html-editor').style.height = document.querySelector('#html-editor').offsetHeight+"px";
+  // document.querySelector('#css-editor').style.height = document.querySelector('#css-editor').offsetHeight+"px";
+  // document.querySelector('#js-editor').style.height = document.querySelector('#js-editor').offsetHeight+"px";
 
 }
 
@@ -132,3 +136,23 @@ function update() {
 setEditor();
 update();
 
+const sectionEditor = document.querySelectorAll('.section-editor');
+function panelToggle(x){
+  let panel = x.getAttribute('panel');
+  console.log(panel);
+  let nowVal = parseInt(document.querySelector('section[panel="'+panel+'"]').getAttribute('open'));
+  console.log(nowVal);
+  let sign = document.querySelector('.toggle-sign[panel="'+panel+'"]').classList.toggle('typcn-plus');
+  let newVal = 1-nowVal;
+  document.querySelector('section[panel="'+panel+'"]').setAttribute('open',newVal);
+  panelResize();
+}
+
+function panelResize(){
+  let total = 0;
+  for (var i = 0; i < sectionEditor.length; i++) {
+    total += parseInt(sectionEditor[i].getAttribute('open'));
+  }
+  coding.style.setProperty("--editor-open",total);
+  console.log(total);
+}

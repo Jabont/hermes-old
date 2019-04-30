@@ -38,7 +38,7 @@ function get_headbar_menu($part){
 	switch ($part) {
 		case 'login':
 		?>
-		<a href="register.php" title="" class="mob-wide  t-center capital btn padding no-round">
+		<a href="register.php" title="" class="mob-wide btn-pink t-center capital btn padding no-round">
 			register
 		</a>
 		<?php
@@ -47,7 +47,7 @@ function get_headbar_menu($part){
 		case 'register':
 		case 'index':
 		?>
-		<a href="login.php" title="" class="mob-wide  t-center capital btn padding no-round">
+		<a href="login.php" title="" class="mob-wide btn-pink t-center capital btn padding no-round">
 			login
 		</a>
 		<?php
@@ -75,7 +75,15 @@ function get_headbar_menu($part){
 			<span title="Save to cloud" class="v-bottom-wrap capital btn btn-green padding padding-l-hzt">
 				<span class="typcn typcn-cloud-storage-outline icon-zoom"></span> <span class="padding-vs-hzt">save</span>
 			</span>
+			&nbsp;
+			<a href="login.php" title="" class="mob-wide  t-center capital btn btn-pink padding no-round">
+				login
+			</a>
+			<a href="login.php" title="" class="mob-wide  t-center capital btn btn-pink padding no-round">
+				register
+			</a>
 		</div>
+		
 		<?php
 
 	}

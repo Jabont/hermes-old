@@ -1,3 +1,7 @@
+:root{
+	--editor-other-height:153px;
+	--editor-open:3;
+}
 iframe {
 	background: #333;
 }
@@ -7,7 +11,7 @@ iframe {
 }
 
 #html-editor, #css-editor, #js-editor {
-	height: calc(calc(100vh - 208px) / 3);
+	height: calc(calc(100vh - var(--editor-other-height)) / var(--editor-open));
 }
 
 #render{
@@ -19,4 +23,13 @@ iframe {
 
 .page-editor #main{
 	/*min-height: 600px;*/
+}
+.ace_editor{
+	transition: height .3s;
+}
+section[open="0"] .ace_editor {
+    height: 0 !important;
+}
+.ace_editor{
+	font: 12px/normal "Menlo-Regular","Consolas","Monospace";
 }
