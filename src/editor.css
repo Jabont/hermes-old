@@ -13,3 +13,6 @@ iframe {
 #render{
 	background: #fff;
 }
+.icon-zoom::before{
+	transform: scale(1.5);
+}

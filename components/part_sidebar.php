@@ -10,7 +10,7 @@
 	</div>
 </div>
 <sp class="l"></sp>
-<a href="editor.php" title="" class="btn wide t-center no-round btn-blue ffont"><!-- <span class="typcn typcn-plus size-l b5"></span>  --><span>New Wing</span></a>
+<a href="editor.php" title="" class="btn wide t-center no-round btn-blue"><!-- <span class="typcn typcn-plus size-l b5"></span>  --><span>New Wing</span></a>
 
 <sp class="vl"></sp>
 <ul class="roboto capital">
@@ -29,7 +29,7 @@
 	<li><a href=""><span class="typcn h8 typcn-folder-open"></span> All</a></li>
 	<li><a href=""><span class="typcn h8 typcn-business-card"></span> Enrolled</a></li>
 	
-	<li><a href=""><span class="typcn h8 typcn-tabs-outline"></span> manager</a></li>
+	<li><a href=""><span class="typcn h8 typcn-archive"></span> manager</a></li>
 	<li><a href=""><span class="typcn h8 typcn-pencil"></span> create new</a></li>
 	
 

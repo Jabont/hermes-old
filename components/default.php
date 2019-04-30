@@ -38,7 +38,7 @@ function get_headbar_menu($part){
 	switch ($part) {
 		case 'login':
 		?>
-		<a href="register.php" title="" class="mob-wide  t-center capital btn padding no-round ffont">
+		<a href="register.php" title="" class="mob-wide  t-center capital btn padding no-round">
 			register
 		</a>
 		<?php
@@ -47,7 +47,7 @@ function get_headbar_menu($part){
 		case 'register':
 		case 'index':
 		?>
-		<a href="login.php" title="" class="mob-wide  t-center capital btn padding no-round ffont">
+		<a href="login.php" title="" class="mob-wide  t-center capital btn padding no-round">
 			login
 		</a>
 		<?php
@@ -55,19 +55,29 @@ function get_headbar_menu($part){
 
 		case 'editor':
 		?>
-		<span id="autorun" class="mob-wide t-center capital btn bg-ci3 cl-white padding ffont">
-			auto Run
-		</span> 
-		<span class="mob-wide t-center capital btn btn-blue padding ffont" onclick="update()">
-			update
-		</span> 
-		</a>
-		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding ffont">
-			save
-		</a>
-		<a href="" title="" class="mob-wide  t-center capital btn btn-blue padding ffont">
-			fork
-		</a>
+		<div class="v-middle-wrap size-m no-select">
+			<span class="padding-hzt">
+				<span title="Love it!" class="v-bottom-wrap btn btn-pink padding">
+				<span class="typcn typcn-heart-outline icon-zoom"></span>
+			</span> 
+			</span>
+			<span id="autorun" title="Auto run" class="v-bottom-wrap btn cl-white padding">
+				<span class="typcn typcn-flash-outline icon-zoom"></span>
+			</span> 
+
+			<span id="update" title="Update" class="v-bottom-wrap capital btn btn-blue padding padding-l-hzt" onclick="update()" style="display:none">
+				<span class="typcn typcn-refresh-outline icon-zoom"></span><span class="padding-vs-hzt">update</span>
+			</span> 
+
+			<span title="Fork" class="v-bottom-wrap capital btn bg-white cl-grey padding padding-l-hzt" style="background-image: none">
+				<span class="typcn typcn-tabs-outline icon-zoom"></span> <span class="padding-vs-hzt">fork</span>
+			</span>
+
+			
+			<span title="Save to cloud" class="v-bottom-wrap capital btn btn-green padding padding-l-hzt">
+				<span class="typcn typcn-cloud-storage-outline icon-zoom"></span> <span class="padding-vs-hzt">save</span>
+			</span>
+		</div>
 		<?php
 
 	}

@@ -91,7 +91,7 @@ get_header("Register");
 							}
 						 ?>
 						 </sp>
-						<button type="submit" value="email_register" name="form" class="no-round wide capital btn btn-pink padding ffont size-l">Submit</button>
+						<button type="submit" value="email_register" name="form" class="no-round wide capital btn btn-pink padding size-l">Register</button>
 						<sp class=""></sp>
 						<a href="login.php" title="" class="block t-right">Already have an account?</a>
 					</form>

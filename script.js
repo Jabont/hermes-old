@@ -5,7 +5,7 @@
  var btnAutorun = document.querySelector('#autorun');
 // var btnRun = document.querySelector('#btn-run');
 // var btnPreview = document.querySelector('#btn-preview');
-var isAutorun = false;
+var isAutorun = true;
 
 // btnRun.addEventListener('click', function () {
 //   update();
@@ -22,10 +22,12 @@ btnAutorun.addEventListener('click', function () {
 
 function change_state() {
   if (isAutorun) {
-    btnAutorun.className = "mob-wide t-center capital btn cl-white padding ffont"
+    document.querySelector('#update').style.display = "none";
+    btnAutorun.classList.remove("bg-ci3");
   }
   else {
-    btnAutorun.className = "mob-wide t-center capital btn bg-ci3 cl-white padding ffont"
+    document.querySelector('#update').style.display = "inline-block";
+    btnAutorun.classList.add("bg-ci3");
   }
 }
 

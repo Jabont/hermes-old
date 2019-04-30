@@ -8,8 +8,9 @@ session_start();
 $page = "editor";
 include('function.php');
 include('components/default.php');
-get_header("editor");
+get_header();
 ?>
+
 <body class="page-default">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.3/ace.js"></script>
@@ -25,15 +26,15 @@ get_header("editor");
 				<box col="4"><inner>
 					<theboxes>
 						<box col="12" class="editor"><inner>
-							<p class="padding-m">HTML</p>
+							<p class="padding-m b7">HTML</p>
 							<div id="html-editor" onclick="update()"></div>
 						</inner></box>
 						<box col="12" class="editor"><inner>
-							<p class="padding-m">CSS</p>
+							<p class="padding-m b7">CSS</p>
 							<div id="css-editor" onclick="update()"></div>
 						</inner></box>
 						<box col="12" class="editor"><inner>
-							<p class="padding-m">JavsScript</p>
+							<p class="padding-m b7">JavaScript</p>
 							<div id="js-editor" onclick="update()"></div>
 						</inner></box>
 					</theboxes>

@@ -71,7 +71,7 @@ get_header("Login");
 							else { ?>
 								<sp class="l"></sp>
 						<?php } ?>
-						<button type="submit" name="form" value="login" class="no-round wide capital btn btn-pink padding ffont size-l">login</button>
+						<button type="submit" name="form" value="login" class="no-round wide capital btn btn-pink padding size-l">login</button>
 						<sp class=""></sp>
 						<a href="register.php" title="" class="block t-right">Don't have an account yet?</a>
 					</form>
