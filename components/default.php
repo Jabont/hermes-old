@@ -56,11 +56,9 @@ function get_headbar_menu($part){
 		case 'editor':
 		?>
 		<div class="v-middle-wrap size-m no-select">
-			<span class="padding-hzt">
-				<span title="Love it!" class="v-bottom-wrap btn btn-pink padding">
-				<span class="typcn typcn-heart-outline icon-zoom"></span>
+			<span title="Love it!" class="v-bottom-wrap padding">
+				<a href="#!" class="typcn typcn-heart-outline icon-zoom cl-pink"></a>
 			</span> 
-			</span>
 			<span id="autorun" title="Auto run" class="v-bottom-wrap btn cl-white padding">
 				<span class="typcn typcn-flash-outline icon-zoom"></span>
 			</span> 

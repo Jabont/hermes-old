@@ -16,3 +16,7 @@ iframe {
 .icon-zoom::before{
 	transform: scale(1.5);
 }
+
+.page-editor #main{
+	/*min-height: 600px;*/
+}
