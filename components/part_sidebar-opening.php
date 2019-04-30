@@ -16,7 +16,7 @@
 			
 			<theboxes class="middle">
 				<box mob="10" class=""><inner class="t-left v-middle-wrap">
-					<img src="<?=$logo_url?>" class="logo x32">
+					<img src="<?=$GLOBALS['logo_url']?>" class="logo x32">
 					<h3 class="cl-ci1 inline-block"><?php echo $GLOBALS['site_name']?></h3>
 				</inner></box>
 				<box mob="2" class=""><inner class="t-right">

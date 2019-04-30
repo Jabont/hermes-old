@@ -39,9 +39,11 @@ get_header("Classroom - ".$classroom_name);
 			<div class="cont-pd inner t-center">
 				<sp></sp>
 				<h3>
-					<span class="padding-hzt"><span class="typcn h8 typcn-book"></span> 2 units</span> | 
-					<span class="padding-hzt"><span class="typcn h8 typcn-briefcase"></span> 5 works</span> | 
-					<span class="padding-hzt"><span class="typcn h8 typcn-feather"></span> 139 wings</span> |
+					<a href="#unit-1">
+						<span class="padding-hzt"><span class="typcn h8 typcn-book"></span> 2 units</span> | 
+						<span class="padding-hzt"><span class="typcn h8 typcn-briefcase"></span> 5 works</span> | 
+						<span class="padding-hzt"><span class="typcn h8 typcn-feather"></span> 139 wings</span> |
+					</a>
 					<span class="padding-hzt"><span class="typcn h8 typcn-group-outline"></span> 273 members</span>
 				</h3>
 				<sp></sp>

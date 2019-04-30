@@ -3,6 +3,8 @@ include('config.php');
 $site_name = $site_name;
 $site_url = $site_url;
 $logo_url = $logo_url;
+$logo_touch_url = $logo_touch_url;
+$logo_start_url = $logo_start_url;
 function get_header($title = null){
 	if ($title == null) {
 		$the_title = $GLOBALS['site_name']." by IT KMITL";

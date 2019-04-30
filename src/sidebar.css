@@ -1,7 +1,6 @@
-:root{
-	--navheight:0;
-}
+
 .page-sidebar{
+	--navheight:0;
 	display: flex;
 	align-items: stretch;
 	margin-top: var(--navheight);
@@ -29,14 +28,14 @@
 .page-sidebar #side-blank{
 	width: var(--side-width);
 	background:  var(--side-bg);
-	min-height: 900px;
+	min-height: 1000px;
 }
 .page-sidebar #side-main{
 	width: calc(100% - var(--side-width));
 }
 /*-- Mobile Version --*/
 @media (max-width: 768px) {
-	:root{
+	.page-sidebar{
 		--navheight:59px;
 	}
 	.page-sidebar #side-nav{

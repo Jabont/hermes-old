@@ -13,7 +13,7 @@
 	--df-txt:#fff;
 
 	--a-txt:#ffff;
-	--a-hover:#fffa;
+	--a-hover:#fff8;
 
 	--ci1:#ffCf40;
 	--ci2:#d28529;
@@ -45,6 +45,9 @@
 }
 .ffont, .title.ffont, h1, h2, h3, h4{
 	/*letter-spacing: .1em;*/
+}
+a, a:link, a:visited{
+	transition: color .2s;
 }
 .roboto.roboto {
 	font-family: "Roboto","pmr-font","Sukhumvit Set",-apple-system, BlinkMacSystemFont,"HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -220,37 +223,37 @@ iframe {
 	border: 0;
 	background: #111;
 	width: 30%;
-}*/
-.inline-container {
-	position: relative;
-	display: inline-grid;
-	height: 100%;
-}
+	}*/
+	.inline-container {
+		position: relative;
+		display: inline-grid;
+		height: 100%;
+	}
 
-.flex {
-	display: flex;
-	flex-wrap: wrap;
-	flex-basis: auto;
-	align-content: space-between;
-	justify-content: space-around;
-}
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+		flex-basis: auto;
+		align-content: space-between;
+		justify-content: space-around;
+	}
 
-.frame {
-	display: block;
-	height: 44vh;
-}
+	.frame {
+		display: block;
+		height: 44vh;
+	}
 
-.container .inline-block {
-	display: block;
-}
+	.container .inline-block {
+		display: block;
+	}
 
-.editor {
-	height: calc(calc(100vh - 64px) / 3);
-}
+	.editor {
+		height: calc(calc(100vh - 64px) / 3);
+	}
 
-.container div[editor] {
-	height: 300px;
-	/*border-radius: 5px;*/
+	.container div[editor] {
+		height: 300px;
+		/*border-radius: 5px;*/
 	/*
 	background: rgba(255, 255, 255, 0.8);
 	color: black !important;
