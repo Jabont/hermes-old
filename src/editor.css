@@ -25,7 +25,7 @@ iframe {
 	/*min-height: 600px;*/
 }
 .ace_editor{
-	transition: height .1s;
+	transition: height .3s;
 }
 section[open="0"] .ace_editor {
     height: 0 !important;

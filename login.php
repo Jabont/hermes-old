@@ -13,29 +13,25 @@ get_header("Login");
 
 <?php
 	if (sizeof($_POST) > 0) {
-		// $data = $_POST;
-		// if ($data['form'] == 'login') {
-		// 	$username = $data['username'];
-		// 	$password = $data['password'];
-		// 	$sql = "SELECT * FROM user WHERE username = '$username';";
-		// }
-		// $result = confect($sql);
-		// $status_error = 0;
-		// if ($result[0]['password'] == hash('md5', $data['password'])) {
-		// 	$_SESSION['login_status'] = 1;
-		// 	$_SESSION['username'] = $data['username'];
-		// 	$_SESSION['uid'] = $result[0]['id'];
-		// 	$_SESSION['token'] = $result[0]['token'];
-		// 	$_SESSION['role'] = $result[0]['role'];
-		// 	header('Location: dashboard.php');
-		// }
-		// else{
-		// 	$status_error = 1;
-		// }
-
-		// ชั่วคราว
-		$_SESSION['login_status'] = 1;
-		header('Location: dashboard.php');
+		$data = $_POST;
+		if ($data['form'] == 'login') {
+			$username = $data['username'];
+			$password = $data['password'];
+			$sql = "SELECT * FROM user WHERE username = '$username';";
+		}
+		$result = confect($sql);
+		$status_error = 0;
+		if ($result[0]['password'] == hash('md5', $data['password'])) {
+			$_SESSION['login_status'] = 1;
+			$_SESSION['username'] = $data['username'];
+			$_SESSION['uid'] = $result[0]['id'];
+			$_SESSION['token'] = $result[0]['token'];
+			$_SESSION['role'] = $result[0]['role'];
+			header('Location: dashboard.php');
+		}
+		else{
+			$status_error = 1;
+		}
 	}
 	?>
 <body class="page-default">
