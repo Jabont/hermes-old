@@ -9,7 +9,9 @@
 					<h4 class="cl-ci1 inline-block padding-s-hzt"><?=$GLOBALS['site_name']?></h4>
 					<span class="cl-white roboto mob-size-s">by IT KMITL</span>
 				</a>
-				<?php else: ?><span class="b7 h8 padding-hzt">Example 1</span>
+				<?php else: ?>
+					<span class="b7 h8 padding-hzt">Example 1</span> 
+					<span class="typcn h8 typcn-pencil"></span>
 			<?php endif ?>
 
 		</a>

@@ -154,5 +154,9 @@ function panelResize(){
     total += parseInt(sectionEditor[i].getAttribute('open'));
   }
   coding.style.setProperty("--editor-open",total);
-  console.log(total);
+  setTimeout(function(){
+    htmlEditor.resize();
+    cssEditor.resize();
+    jsEditor.resize();
+  },150);
 }

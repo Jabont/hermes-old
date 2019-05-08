@@ -67,6 +67,6 @@ get_header();
 			</theboxes>
 		</div>
 	</section>
-	<script src="editor.js"></script>
+	<script src="editor.js?v=<?=time()?>"></script>
 </body>
 <?php get_footer() ?>
