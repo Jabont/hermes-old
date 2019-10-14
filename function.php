@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('config.php');
 function con(){
 	include('config.php');
@@ -41,5 +42,9 @@ function confect($sql) {
 	}
 	mysqli_fetch_assoc($result);
 	return $result;
+}
+
+function alreadyLogin() {
+	return isset($_SESSION['login_status']);
 }
 ?>

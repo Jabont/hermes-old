@@ -79,45 +79,63 @@
 						$username = "hermes_db";
 						$password = "hermesit16";
 						$dbname = "hermes_db";
-						$conn = new mysqli($servername, $username, $password, $dbname);
+						// $conn = new mysqli($servername, $username, $password, $dbname);
 
 						if ($conn->connect_error) {
 							die($conn->connect_error);
 						}
 						else {
-							mysqli_set_charset($conn, 'utf8');
+							// mysqli_set_charset($conn, 'utf8');
 							return $conn;
 						}
 					}
 
-					$conn = conn();
+					// $conn = conn();
 					if (!$conn) { ?>
 						<h1> Can't connect to server </h1>
 					<?php
 					}
 
 					$sql = "SELECT id, name, description FROM class_main";
-					if($result = $conn->query($sql)) {
+					// if($result = $conn->query($sql)) {
 						$counter = 0;
 						echo "<div class='row'>";
-						while ($row = $result->fetch_assoc()) {
+						// while ($row = $result->fetch_assoc()) {
+						while ($counter < 5) {
+							$row[0]['name'] = 'Muti';
+							$row[0]['description'] = 'EiEi';
+							$row[0]['id'] = 1;
+							$row[1]['name'] = 'Math';
+							$row[1]['description'] = 'kuyyai';
+							$row[1]['id'] = 2;
+							$row[2]['name'] = 'Math';
+							$row[2]['description'] = 'kuyyai';
+							$row[2]['id'] = 2;
+							$row[3]['name'] = 'Math';
+							$row[3]['description'] = 'kuyyai';
+							$row[3]['id'] = 2;
+							$row[4]['name'] = 'Math';
+							$row[4]['description'] = 'kuyyai';
+							$row[4]['id'] = 2;
+
 							if ($counter % 3 == 0) {
-								echo "</div><div class='row'>";
+								echo "</div><br><div class='row'>";
+
 							} ?>
 							<div class="col-4">
 								<div class="course">
 									<div class="row">
 										<div class="col-3 card_"><img src="https://via.placeholder.com/30"></div>
 										<div class="col-9 card_">
-											<h2 style='color: #FFF'><?php echo $row['name']; ?></h2>
-											<h3 style='color: #F0F0F0'><?php echo $row['description']; ?></h3>
+											<h2 style='color: #FFF'><?php echo $row[$counter]['name']; ?></h2>
+											<h3 style='color: #F0F0F0'><?php echo $row[$counter]['description']; ?></h3>
 											<?php
-											$pass = ongcon("SELECT * FROM class_enrollment WHERE class_id = ".$row['id']." AND user_id = ".$_SESSION['uid'].";");
+											// $pass = ongcon("SELECT * FROM class_enrollment WHERE class_id = ".$row['id']." AND user_id = ".$_SESSION['uid'].";");
 											if ($pass) {
 												echo "<a class='btn btn-info' href='classroom_enrollment.php?id=".$row['id']."'>Lesson</a>";
 												echo "  <a class='btn btn-info' href='classroom_enrollment.php?id=".$row['id']."&exit=1'>Enroll ออก</a>";
 											} else {
-												echo "<a class='btn btn-info' href='classroom_enrollment.php?id=".$row['id']."'>Enroll</a>";
+												echo "<a class='btn btn-info' href='classroom_enrollment.php?id=".$row['id']."'>Enter</a>";
 											} ?>
 										</div>
 									</div>
@@ -127,7 +145,7 @@
 							$counter += 1;
 						}
 						echo "</div>";
-					}
+					// }
 				?>
 			</div>
 		</div>

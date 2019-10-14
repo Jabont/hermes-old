@@ -18,7 +18,7 @@
 </ul>
 <sp class=""></sp>
 <h4 class="cl-ci-blue upper">Wings</h4>
-<ul class="roboto capital">	
+<ul class="roboto capital">
 	<li><a href="my-wings.php"><span class="typcn h8 typcn-feather"></span> my wings</a></li>
 	<li><a href=""><span class="typcn h8 typcn-document-text"></span> my works</a></li>
 
@@ -26,12 +26,12 @@
 <sp class=""></sp>
 <h4 class="cl-ci-purple upper">Classroom</h4>
 <ul class="roboto capital">
-	<li><a href=""><span class="typcn h8 typcn-folder-open"></span> All</a></li>
+	<li><a href="allClassroom.php"><span class="typcn h8 typcn-folder-open"></span> All</a></li>
 	<li><a href=""><span class="typcn h8 typcn-business-card"></span> Enrolled</a></li>
-	
+
 	<li><a href=""><span class="typcn h8 typcn-archive"></span> manager</a></li>
-	<li><a href=""><span class="typcn h8 typcn-pencil"></span> create new</a></li>
-	
+	<li><a href="createClassroom.php"><span class="typcn h8 typcn-pencil"></span> create new</a></li>
+
 
 </ul>
 <sp class=""></sp>
@@ -54,7 +54,7 @@
 		if (num.length == 1) return "0" + num;
 		else return num;
 	}
-	
+
 	setInterval (function () {
 		let date = new Date();
 		document.querySelector("#time-counting").innerText = `${paddingTextNumber(date.getHours())}:${paddingTextNumber(date.getMinutes())}:${paddingTextNumber(date.getSeconds())}`;

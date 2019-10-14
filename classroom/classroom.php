@@ -10,7 +10,7 @@
 	include('function.php');
 	include('components/default.php');
 
-	$class = ongcon("SELECT * FROM class_main WHERE id = '$class_id';");
+	// $class = ongcon("SELECT * FROM class_main WHERE id = '$class_id';");
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,17 +38,6 @@
 		} ?>
 		<a href="enrolled.php" title="" >Enrolled</a>
 		<a href="MyClassroom.php" title="" >MyClassroom</a>
-        <?php
-	        $con = con();
-	        $sql = "SELECT id, name, description FROM class_main";
 
-	        if ($result = $con->query($sql)) {
-		        while ($row = $result->fetch_assoc()) {
-		        	echo '<button name="form" class="ong-button" onclick="window.location.href=\'classroom_enrollment.php?id='.$row['id'].'\'">'.$row['name'].'</button>';
-		        }
-		    } else {
-		    	echo $con->error;
-		    }
-    	?>
     </div>
 </body>

@@ -84,7 +84,7 @@ function save() {
     success: function (data) {
       if (data.success == true) {
         alert('success');
-        location.hash = '#' + data.wing;
+        location.hash = '#' + data.access_id;
       }
     }
   });

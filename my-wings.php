@@ -32,13 +32,14 @@ get_header("Dashboard");
 				<box col="3" style="cursor: pointer;"><inner class="bg-blue">
 				<a <?php 
 					$accs_id = $row['access_id'];
-					echo " href='/editor.php#$accs_id'";?>>
+					echo " href='./editor.php#$accs_id'";?>>
 				<iframe class='display_wing' frameborder='0' scrolling='no' style='pointer-events: none;' src=<?php echo "'/box/ice/render.php?key=$accs_id'"; ?>></iframe>
 				<div class="padding">
 					<theboxes class="spacing -clip">
 					<box col="3"><img class="wide circle" src=https://via.placeholder.com/36></box>
 					<box col="9" class="">
-						<p class="owner"><?php echo $_SESSION['username']; ?></p>
+						<p class="wingname"><?php echo $row['wing_name']; ?></p>
+						<p class="owner" style="color: #F7F7F7; font-size: 0.8em"><?php echo $_SESSION['username']; ?></p>
 						<p class="views">#<?php echo $row['access_id']; ?></p>
 					</box>
 					<box col="12"><inner>
